@@ -10,9 +10,9 @@ class Triangle
   
   def valid?
     # no negatives, all must be > 0 
-    result = [@a, @b, @c].all?{|side| side > 0}
+    valid = [@a, @b, @c].all?{|side| side > 0}
     # test for triangle inequality 
-    result && (@a + @b > @c) && (@a + @c > @b) && (@b + @c > @a)
+    valid && (@a + @b > @c) && (@a + @c > @b) && (@b + @c > @a)
   end 
   
   def kind 
